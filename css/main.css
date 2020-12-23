@@ -1,0 +1,21 @@
+#B{margin: 26px 15px; width: 345px; overflow: hidden;}
+#B ul{width: 1035px;}
+#B ul li{float: left;}
+
+#C{clear: both; margin: 25px 15px;}
+#C section h2{font-size: 17px; margin: 25px 0 10px 5px;}
+.C1 ul{overflow: auto;}
+.C1 ul li{float: left; margin: 10px 0;}
+.C1 ul li:first-child{margin-right: 15px;}
+.C1 ul li:nth-child(3){margin-right: 15px;}
+
+.C2{clear: both;}
+.C2 ul{overflow: auto;}
+.C2 ul li{float: left; margin-right: 12px;}
+.C2 ul li:last-child{margin-right: 0;}
+
+.C3{clear: both;}
+.C3 ul{overflow: auto;}
+.C3 ul li{float: left; margin: 10px 0;}
+.C3 ul li:first-child{margin-right: 15px;}
+.C3 ul li:nth-child(3){margin-right: 15px;}

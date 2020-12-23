@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>미술관</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script/jquery-3.5.1.min.js"></script>
+    <script src="script/common.js"></script>
+    <script src="script/main.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <header id="A">
+            <h1>
+                <a href="#">
+                    <img src="image/logo1.svg" alt="로고1">
+                </a>
+            </h1>
+            <nav>
+                <button class="menu"><img src="image/menu-icon.svg" alt="메뉴"></button>
+                <button class="ticket"><img src="image/ticket-icon.svg" alt="티켓"></button>
+                <button class="announce"><img src="image/announce-icon.svg" alt="알림"></button>
+            </nav>
+        </header>
+        <div id="B">
+            <ul class="slide">
+                <li><a href="#"><img src="image/main-banner1.png" alt="온라인생중계"></a></li>
+                <li><a href="#"><img src="image/main-banner2.png" alt="팀랩: 라이프"></a></li>
+                <li><a href="#"><img src="image/main-banner3.png" alt="전혀 예술적인 엉성한 미술관"></a></li>
+            </ul>
+        </div>
+        <div id="C">
+            <section class="C1">
+                <h2>진행중인 전시회</h2>
+                <ul>
+                    <li><a href="#"><img src="image/main-exhibition1.png" alt="너의 감정과 기억"></a></li>
+                    <li><a href="#"><img src="image/main-exhibition2.png" alt="PEER IN."></a></li>
+                    <li><a href="#"><img src="image/main-exhibition3.png" alt="헬로, 스트레인저!"></a></li>
+                    <li><a href="#"><img src="image/main-exhibition4.png" alt="teamLab: LIFE"></a></li>
+                </ul>
+            </section>
+            <section class="C2">
+                <h2>진행중인 이벤트</h2>
+                <ul>
+                    <li><a href="#"><img src="image/main-event1.png" alt="PEER IN. 이벤트"></a></li>
+                    <li><a href="#"><img src="image/main-event2.png" alt="헬로, 스트레인저! 이벤트"></a></li>
+                    <li><a href="#"><img src="image/main-event3.png" alt="teamLab: LIFE 이벤트"></a></li>
+                </ul>
+            </section>
+            <section class="C3">
+                <h2>최근 본 전시회와 비슷한 전시회</h2>
+                <ul>
+                    <li><a href="#"><img src="image/main-similar1.png" alt="VIDEO ACTS"></a></li>
+                    <li><a href="#"><img src="image/main-similar2.png" alt="택지개발사의 도시"></a></li>
+                    <li><a href="#"><img src="image/main-similar3.png" alt="여행갈까요"></a></li>
+                    <li><a href="#"><img src="image/main-similar4.png" alt="양아치-갤럭시 익스프레스"></a></li>
+                </ul>
+            </section>
+        </div>
+        <div id="menubar">
+            <div class="menubox">
+            <h3>
+                <a href="#">
+                    <img src="image/logo2.svg" alt="로고2">
+                </a>
+            </h3>
+            <button class="login">Login</button>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="image/exhibition-icon.svg" alt="전시회">
+                            진행중인 전시회
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/ticket-icon.svg" alt="티켓">
+                            예매하기
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/event-icon.svg" alt="이벤트">
+                            이 벤 트
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/shop-icon.svg" alt="샵">
+                            굿 즈 샵
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/notice-icon.svg" alt="공지사항">
+                            공지사항
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/service-icon.svg" alt="고객센터">
+                            고객센터
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="image/set-icon.svg" alt="설정">
+                            설정하기
+                        </a>
+                    </li>
+                </ul>
+                <button class="close">×</button>
+            </div>
+        </div>
+        <div id="menu2">
+            <ul>
+                <li><a href="#"><img src="image/back-icon.svg" alt="뒤로가기"></a></li>
+                <li><a href="#"><img src="image/home-icon.svg" alt="홈"></a></li>
+                <li><a href="#homeup" id="homeup"><img src="image/top-icon.svg" alt="위로가기"></a></li>
+                <li><a href="#homedown" id="homedown"><img src="image/down-icon.svg" alt="아래로가기"></a></li>
+            </ul>
+        </div>
+        <footer id="D">
+            <h4 class="hide">하단메뉴</h4>
+            <ul>
+                <li><a href="#">회원약관</a></li>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">고객센터</a></li>
+            </ul>
+        </footer>
+    </div>
+    
+    <script>
+        $(document).ready(function(){
+            $(function(){
+                $("#homeup").click(function(){
+                    $("body, html").animate({
+                        scrollTop: 0
+                    }, 800);
+                    return false;
+                });
+                var scrollHeight = $(document).height();
+                $("#homedown").click(function(){
+                    $("body, html").animate({
+                        scrollTop: scrollHeight
+                    }, 800);
+                    return false;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
